@@ -1,24 +1,26 @@
 import './App.css'
+import Block from './components/Block'
+
+const b1: string = "Bloque 1";
 
 function App() {
 
   return (
     <div className="text-center">
-      <Block text="Bloque 1" tailwind="bg-green-400 bg-auto"/>
-      <Block text="Bloque 2" tailwind="bg-blue-400 bg-auto"/>
+      <Block text={b1} tailwind="bg-green-400 bg-auto"/>
+      <Block text="Bloque 2" tailwind="bg-blue-400 bg-auto">
+        <Card></Card> 
+      </Block>
       <Block text="Bloque 3" tailwind="bg-yellow-400 bg-auto"/>
-    </div>
-  )
-}
-
-function Block(props: any){
-  return (
-    <div className= {props.tailwind}>
-      <p>
-        {props.text}
-      </p>
+      {/* <Card></Card> */}
     </div>
   )
 }
 
 export default App
+
+function Card() {
+  return(
+    <h1>Hello world</h1>
+  )
+}
