@@ -3,12 +3,13 @@ interface Prop {
     text: string;
 }
 
-function Block({ tailwind, text }: Prop) {
+function Block({ tailwind, text, children }: Prop) {
     return (
         <div className={tailwind}>
             <p>
                 {text}
             </p>
+            {children}
         </div>
     )
 }
